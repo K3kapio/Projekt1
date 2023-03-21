@@ -15,9 +15,7 @@
 .header_logo{
     font-size: 50px;
     align-items: center;
-    display: flex;
-    justify-content: flex;
-    
+    display: flex;    
 }
 
 .nav{
