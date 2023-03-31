@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Memory</title>
+        <title>Orchard Feli</title>
         <meta charset="utf-8">
-        <meta name="description" content="Memory games">
-        <meta name="keywords" content="Memory, game, games">
+        <meta name="description" content="We offer healthy food from our orchard">
+        <meta name="keywords" content="orchard, food, healthy food, apple, strawberry, cherry">
         <meta name="author" content="Przemysław Kawęcki">       
         <meta name="copyright" content="Copyright owner">
         <meta name="robots" content="index,follow">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="stylee.css">
-        <script src="script.js" async></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="container">
 
             <header class="header">
-                <h1>Memory</h1>
-                <span class="wyniki">
-                    <span class="wyniki_X" id="wyniki_X">Gracz X <span id="X">0</span></span>
-                    <span class="wyniki_O" id="wyniki_O">Gracz O <span id="O">0</span></span>                
-                </span>
+                <a href="index.html">
+                    <picture>
+                        <img src="image/logo.png" alt="Logo" width="150">
+                    </picture>
+                </a>
+                <section class="header_logo">
+                    <h1>Orchard FELI</h1>
+                </section>
             </header>
             
             
             <nav class="nav">
-                <input class = "nav_player" id="player_vs_player" type="button" value="Player vs Player" onclick="przypiszWartosci()">
-                <input class = "nav_player" id="player_vs_computer" type="button" value="Player vs Computer" onclick="computerr()">
+                <span class = "nav_item"> <a href="index.html">Home</a></span>
+                <span class = "nav_item"> <a href="shop.html">Shop</a></span>
+                <span class = "nav_item"> <a href="aboutus.html">About us</a></span>
+                <span class = "nav_item"> <a href="gallery.html">Gallery</a></span>
+                <span class = "nav_item"> <a href="contact.html">Contact</a></span>
+                <span class = "nav_item"> <a href="gra.html">GRA</a></span>
             </nav>
             
             
             <main class="main">
-                <div class="main_game">
-                    <input id="0" class="main_game_cell" type="button" value=" " onclick="press('0'), unpress('0')" disabled>
-                    <input id="1" class="main_game_cell" type="button" value=" " onclick="press('1'), unpress('1')" disabled>
-                    <input id="2" class="main_game_cell" type="button" value=" " onclick="press('2'), unpress('2')" disabled>
-                    <input id="3" class="main_game_cell" type="button" value=" " onclick="press('3'), unpress('3')" disabled>
-                    <input id="4" class="main_game_cell" type="button" value=" " onclick="press('4'), unpress('4')" disabled>
-                    <input id="5" class="main_game_cell" type="button" value=" " onclick="press('5'), unpress('5')" disabled>
-                    <input id="6" class="main_game_cell" type="button" value=" " onclick="press('6'), unpress('6')" disabled>
-                    <input id="7" class="main_game_cell" type="button" value=" " onclick="press('7'), unpress('7')" disabled>
-                    <input id="8" class="main_game_cell" type="button" value=" " onclick="press('8'), unpress('8')" disabled>
-                    <input id="9" class="main_game_cell" type="button" value=" " onclick="press('9'), unpress('9')" disabled>
-                    <input id="10" class="main_game_cell" type="button" value=" " onclick="press('10'), unpress('10')" disabled>
-                    <input id="11" class="main_game_cell" type="button" value=" " onclick="press('11'), unpress('11')" disabled>
-                    <input id="12" class="main_game_cell" type="button" value=" " onclick="press('12'), unpress('12')" disabled>
-                    <input id="13" class="main_game_cell" type="button" value=" " onclick="press('13'), unpress('13')" disabled>
-                    <input id="14" class="main_game_cell" type="button" value=" " onclick="press('14'), unpress('14')" disabled>
-                    <input id="15" class="main_game_cell" type="button" value=" " onclick="press('15'), unpress('15')" disabled>
-                       
-                </div>
-                <div class="main_win" id="main_win">
-
-                </div>
-                </main>
+                <picture class="picture">
+                    <source srcset="image/zdjecie1.jpg" media="(min-width: 1724px)">
+                    <source srcset="image/zdjecie2.jpg" media="(min-width: 1028px)">
+                    <img src="image/zdjecie3.jpg" alt="photo">    
+                </picture>
+                <section class="info">
+                    <header class="info_header">
+                        <h2>
+                            About us 
+                        </h2>
+                    </header>
+                    <div class="info_sect">
+                        <article class="info_sect_article">
+                            <h3>How do we run the orchard?</h3>
+                            <p>We run an eco-friendly fruit farm where we specialize in growing apples, strawberries, and cherries. Our farm is committed to using sustainable farming practices that prioritize the health of our soil, water, and surrounding ecosystem. We believe that our commitment to environmentally responsible agriculture not only benefits our customers by providing them with high-quality, flavorful fruit, but also helps to ensure a healthier planet for future generations.</p>
+                        </article>
+                        <article class="info_sect_article">
+                            <h3>How do we describe healthy food?</h3>
+                            <p>In addition to our commitment to sustainable farming, we are also passionate about educating our customers about the importance of eating locally-grown, seasonal produce. We believe that supporting local farmers not only supports the local economy but also helps to reduce the carbon footprint associated with transporting food long distances. By choosing to purchase our fruit, our customers can feel good about supporting a small, family-owned farm while also enjoying the delicious taste of fresh, in-season fruit.</p>
+                        </article>
+                    </div>
+                </section>
+            </main>
             
-
             
             <footer class="footer">
-                <h4> &copy; 2023 Przemysław Kawęcki </h4>
-                <span id="OC">O</span>   
+                <h4> &copy; 2023 Przemysław Kawęcki </h4>   
             </footer>
         
         </div>
-        
     </body>
 </html>
