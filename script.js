@@ -48,14 +48,17 @@ function kto(a, id){
         x=a;
         console.log(a);
         console.log(licznik);
-        if(document.getElementById("OC").value=="O"){
-            licznik++;
+        if(document.getElementById("OC").innerHTML=="O"){
+            licznik+=1;
+            console.log("SADASMDKLAMNSLK");
         }else{
             licznik+=2;
+            console.log("chujciwdupe");
             if(ktogra=="C"){
                 losujC();
             }
         }
+        console.log("TU JEST KURWA LICZNIK " + licznik);
         document.getElementById(id).disabled=true;
         jakieid=id;
         console.log(licznik);
@@ -210,7 +213,10 @@ function computerr(){
 
 
 function losujC(){
-    let losowa = Math.floor(Math.round()*zablokowane.length);
-    let losowaWar = zablokowane[losowa];
-    press("'"+losowaWar+"'");
+    setTimeout(function(){
+        let losowaWar = zablokowane[Math.floor(Math.random()*zablokowane.length)];
+        console.log("to jest losowawar i losowa"+ losowaWar);
+        press(losowaWar);
+    }, 1000)
+    
 }
