@@ -79,6 +79,7 @@ function kto(a, id){
                     ktogra="O";
                     ktograwyniki="wyniki_O";
                     document.getElementById(ktograwyniki).style.background="yellow";
+                    wygrana();
                 }
                 else{
                     punktyO++;
@@ -87,8 +88,8 @@ function kto(a, id){
                     ktogra="X";
                     ktograwyniki="wyniki_X";
                     document.getElementById(ktograwyniki).style.backgroundColor="yellow";
+                    wygrana()
                 }
-                wygrana();
             }
             else{
                 for(let i = 0; i<16; i++){
@@ -181,7 +182,7 @@ function kto(a, id){
                     ktograwyniki="wyniki_X";
                     document.getElementById(ktograwyniki).style.backgroundColor="yellow";
                 }
-                wygrana(); 
+                wygrana();
             }
         }
     }
@@ -189,7 +190,7 @@ function kto(a, id){
 }
 function press(id) {
     let a = document.getElementById(id);
-    
+    console.log(a.value);
     a.style.background = "url('jpg/" + a.value + ".jpg')";
     a.style.backgroundSize="cover";
     kto(a.value, id);
@@ -220,13 +221,13 @@ function losujC(){
         if(licznik2==0){
             licznik2++;
             losowaWar = tabpom[Math.floor(Math.random()*zablokowane.length)];
-            
+            console.log(losowaWar);
             usuwanie(losowaWar, tabpom);
             press(losowaWar);
         }else{
             licznik2=0;
             losowaWar = tabpom[Math.floor(Math.random()*zablokowane.length)];
-            
+            console.log("tutaj chuj ci w dupe " + losowaWar);
             tabpom=zablokowane.slice();
             press(losowaWar);
         }
