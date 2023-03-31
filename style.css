@@ -15,7 +15,9 @@
 .header_logo{
     font-size: 50px;
     align-items: center;
-    display: flex;    
+    display: flex;
+    justify-content: flex;
+    
 }
 
 .nav{
@@ -23,12 +25,12 @@
     width: 80%;
     padding: 0 10% 0 10%;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .nav_item{
-    max-width: 20%;
-    min-width: 20%;
+    max-width: 15%;
+    min-width: 15%;
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
     display: flex;
@@ -60,6 +62,7 @@ a:active{
 
 .picture{
     padding: 0 10% 0 10%;
+    max-height: 627px;
     display: flex;
     justify-content: center;
 }
