@@ -88,6 +88,7 @@ function kto(a, id){
                     ktograwyniki="wyniki_X";
                     document.getElementById(ktograwyniki).style.backgroundColor="yellow";
                 }
+                wygrana();
             }
             else{
                 for(let i = 0; i<16; i++){
@@ -113,6 +114,7 @@ function kto(a, id){
                     ktograwyniki="wyniki_X";
                     document.getElementById(ktograwyniki).style.backgroundColor="yellow";
                 }
+                wygrana();
             }
         
             
@@ -149,6 +151,7 @@ function kto(a, id){
                     ktograwyniki="wyniki_X";
                     document.getElementById(ktograwyniki).style.backgroundColor="yellow";
                 }
+                wygrana();
             }
             else{
                 for(let i = 0; i<16; i++){
@@ -178,6 +181,7 @@ function kto(a, id){
                     ktograwyniki="wyniki_X";
                     document.getElementById(ktograwyniki).style.backgroundColor="yellow";
                 }
+                wygrana(); 
             }
         }
     }
@@ -229,4 +233,22 @@ function losujC(){
         
     }, 1000)
     
+}
+
+function wygrana(){
+    if(punktyO>punktyX){
+        if(document.getElementById("OC").innerHTML === "O"){
+            document.getElementById("main_win").innerHTML="Wygrywa gracz O";
+        }else{
+            document.getElementById("main_win").innerHTML="Wygrywa komputer";
+        }
+    }
+    else{
+        if(punktyO<punktyX){
+            document.getElementById("main_win").innerHTML="Wygrywa gracz X";
+        }
+        else{
+            document.getElementById("main_win").innerHTML="remis";
+        }
+    }
 }
