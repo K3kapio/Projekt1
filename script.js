@@ -32,6 +32,9 @@ function przypiszWartosci(){
         a.disabled = false;
     }
     document.getElementById(ktograwyniki).style.backgroundColor = "yellow";
+    document.getElementById("player_vs_player").disabled=true;
+    document.getElementById("player_vs_computer").disabled=true;
+
 }
 
 
@@ -46,36 +49,29 @@ function usuwanie(a, tab){
 function kto(a, id){
     if(licznik==0){
         x=a;
-        console.log(a);
-        console.log(licznik);
         if(document.getElementById("OC").innerHTML=="O"){
             licznik+=1;
-            console.log("SADASMDKLAMNSLK");
         }else{
             licznik+=2;
-            console.log("chujciwdupe");
             if(ktogra=="C"){
                 losujC();
             }
         }
-        console.log("TU JEST KURWA LICZNIK " + licznik);
         document.getElementById(id).disabled=true;
         jakieid=id;
-        console.log(licznik);
     }
     else{
         if(licznik==1){
-            console.log("to jest a licznik powinien byc 1 "+ licznik);
             if(x==a){
                 
                 licznik=0;
-                console.log(licznik);
                 x=0;
                 a=0;
                 document.getElementById(id).disabled = true;
-                usuwanie(id, zablokowane);
+                usuwanie(parseInt(id), zablokowane);
                 document.getElementById(jakieid).disabled = true;
-                usuwanie(jakieid, zablokowane);
+                usuwanie(parseInt(jakieid), zablokowane);
+                console.log("to jest id "+ id+" a to jest tablica "+zablokowane);
                 if(ktogra=="X"){
                     punktyX++;
                     document.getElementById(ktogra).innerHTML=punktyX;
@@ -101,7 +97,7 @@ function kto(a, id){
                     document.getElementById(id).style.removeProperty("background");
                     document.getElementById(jakieid).style.removeProperty("background");
                     for(let i = 0; i<zablokowane.length; i++){
-                        document.getElementById(i).disabled=false;
+                        document.getElementById(zablokowane[i]).disabled=false;
                     }
                 }, 1000)
                 licznik=0;
@@ -122,18 +118,18 @@ function kto(a, id){
             
         }
         else{
-            console.log("licznik powinien miec 2" + licznik);
 
             if(x==a){
                 
                 licznik=0;
-                console.log(licznik);
                 x=0;
                 a=0;
+                usuwanie(parseInt(id), zablokowane);
+                console.log("to jest id "+ id+" a " + jakieid +" to jest tablica "+zablokowane);
+                usuwanie(parseInt(jakieid), zablokowane);
+                tabpom=zablokowane.slice();
                 document.getElementById(id).disabled = true;
-                usuwanie(id, zablokowane);
                 document.getElementById(jakieid).disabled = true;
-                usuwanie(jakieid, zablokowane);
                 if(ktogra=="X"){
                     punktyX++;
                     document.getElementById(ktogra).innerHTML=punktyX;
@@ -162,7 +158,7 @@ function kto(a, id){
                     document.getElementById(id).style.removeProperty("background");
                     document.getElementById(jakieid).style.removeProperty("background");
                     for(let i = 0; i<zablokowane.length; i++){
-                        document.getElementById(i).disabled=false;
+                        document.getElementById(zablokowane[i]).disabled=false;
                     }
                 }, 1000)
                 licznik=0;
@@ -189,7 +185,7 @@ function kto(a, id){
 }
 function press(id) {
     let a = document.getElementById(id);
-    console.log("to jest to " + a.value);
+    console.log(a.value);
     a.style.background = "url('jpg/" + a.value + ".jpg')";
     a.style.backgroundSize="cover";
     kto(a.value, id);
@@ -210,13 +206,27 @@ function computerr(){
     document.getElementById("wyniki_O").id = "wyniki_C";
     document.getElementById("OC").innerHTML="C";
 }
-
-
+let licznik2=0
+let tabpom = zablokowane.slice();
+let sprawdzenie = -1;
 function losujC(){
     setTimeout(function(){
-        let losowaWar = zablokowane[Math.floor(Math.random()*zablokowane.length)];
-        console.log("to jest losowawar i losowa"+ losowaWar);
-        press(losowaWar);
+        let losowaWar = 0;
+        
+        if(licznik2==0){
+            licznik2++;
+            losowaWar = tabpom[Math.floor(Math.random()*zablokowane.length)];
+            console.log(losowaWar);
+            usuwanie(losowaWar, tabpom);
+            press(losowaWar);
+        }else{
+            licznik2=0;
+            losowaWar = tabpom[Math.floor(Math.random()*zablokowane.length)];
+            console.log("tutaj chuj ci w dupe " + losowaWar);
+            tabpom=zablokowane.slice();
+            press(losowaWar);
+        }
+        
     }, 1000)
     
 }
