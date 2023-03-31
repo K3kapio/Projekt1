@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Memory</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Memory games">
+        <meta name="keywords" content="Memory, game, games">
+        <meta name="author" content="Przemysław Kawęcki">       
+        <meta name="copyright" content="Copyright owner">
+        <meta name="robots" content="index,follow">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="stylee.css">
+        <script src="script.js" async></script>
+    </head>
+    <body>
+        <div class="container">
+
+            <header class="header">
+                <h1>Memory</h1>
+                <span class="wyniki">
+                    <span class="wyniki_X" id="wyniki_X">Gracz X <span id="X">0</span></span>
+                    <span class="wyniki_O" id="wyniki_O">Gracz O <span id="O">0</span></span>                
+                </span>
+            </header>
+            
+            
+            <nav class="nav">
+                <input class = "nav_player" id="player_vs_player" type="button" value="Player vs Player" onclick="przypiszWartosci()">
+                <input class = "nav_player" id="player_vs_computer" type="button" value="Player vs Computer" onclick="computerr()">
+            </nav>
+            
+            
+            <main class="main">
+                <div class="main_game">
+                    <input id="0" class="main_game_cell" type="button" value=" " onclick="press('0'), unpress('0')" disabled>
+                    <input id="1" class="main_game_cell" type="button" value=" " onclick="press('1'), unpress('1')" disabled>
+                    <input id="2" class="main_game_cell" type="button" value=" " onclick="press('2'), unpress('2')" disabled>
+                    <input id="3" class="main_game_cell" type="button" value=" " onclick="press('3'), unpress('3')" disabled>
+                    <input id="4" class="main_game_cell" type="button" value=" " onclick="press('4'), unpress('4')" disabled>
+                    <input id="5" class="main_game_cell" type="button" value=" " onclick="press('5'), unpress('5')" disabled>
+                    <input id="6" class="main_game_cell" type="button" value=" " onclick="press('6'), unpress('6')" disabled>
+                    <input id="7" class="main_game_cell" type="button" value=" " onclick="press('7'), unpress('7')" disabled>
+                    <input id="8" class="main_game_cell" type="button" value=" " onclick="press('8'), unpress('8')" disabled>
+                    <input id="9" class="main_game_cell" type="button" value=" " onclick="press('9'), unpress('9')" disabled>
+                    <input id="10" class="main_game_cell" type="button" value=" " onclick="press('10'), unpress('10')" disabled>
+                    <input id="11" class="main_game_cell" type="button" value=" " onclick="press('11'), unpress('11')" disabled>
+                    <input id="12" class="main_game_cell" type="button" value=" " onclick="press('12'), unpress('12')" disabled>
+                    <input id="13" class="main_game_cell" type="button" value=" " onclick="press('13'), unpress('13')" disabled>
+                    <input id="14" class="main_game_cell" type="button" value=" " onclick="press('14'), unpress('14')" disabled>
+                    <input id="15" class="main_game_cell" type="button" value=" " onclick="press('15'), unpress('15')" disabled>
+                       
+                </div>
+                <div class="main_win">
+
+                </div>
+                </main>
+            
+
+            
+            <footer class="footer">
+                <h4> &copy; 2023 Przemysław Kawęcki </h4>
+                <span id="OC">O</span>   
+            </footer>
+        
+        </div>
+        
+    </body>
+</html>
