@@ -1,0 +1,119 @@
+.container{
+    background-color: #FFFFFF;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header{
+    height: 100px;
+    padding: 0 10% 0 10%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    background-color: #F5F5F5;
+    width: 80%;
+    padding: 0 10% 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_player{
+    max-width: 40%;
+    min-width: 40%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-style:solid;
+}
+
+.main{
+    margin-top: 8px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 700px;
+    min-width: 400px;
+    width: 60vh;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+}
+.main_g{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+.main_game{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center; 
+}
+
+.main_game_cell{
+    background-color: #f1f1f1;
+    min-height: 140px;
+    min-width: 140px;
+    border-width: 3px;
+    border-style:solid;
+    transition: 0.4s;
+    font-size: 0px;
+}
+.main_game_cell:hover{
+    border-radius: 30px 30px 30px 30px;
+}
+
+.main_win{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    
+    height: 30px;
+    max-height: 30px;
+    padding: 5% 10% 5% 10%;
+}
+
+.wyniki{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.wyniki_X{
+    padding: 0px 10px 0px 10px;
+    width: 190px;
+}
+
+.wyniki_O{
+    padding: 0px 10px 0px 10px;
+    width: 190px;
+
+}
+
+#X{
+    padding: 0 0 0 20px;
+}
+
+#O{
+    padding: 0 0 0 20px;
+}
+
+.footer{
+    background-color: #F5F5F5;
+    padding: 0 20% 0 20%;
+    text-align: center;
+}
+
+body{
+    margin:0px;
+    padding: 0px;
+}
